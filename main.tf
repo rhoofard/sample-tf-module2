@@ -1,8 +1,8 @@
-module "sub_module" {
- source = "git@github.com:Pactionly/sample-tf-module.git?ref=v1.1.0"
- bloop = "jibberis"
- bleep = 1
-}
+#module "sub_module" {
+#source = "git@github.com:Pactionly/sample-tf-module.git?ref=v1.1.0"
+# bloop = "jibberis"
+# bleep = 1
+#}
 
 resource "random_integer" "fault" {
   min = 0
@@ -23,6 +23,6 @@ resource "null_resource" "cluster" {
   }
 
   provisioner "local-exec" {
-    command = "bash -c 'exit ${var.bleep}'"
+    command = "ls -al"
   }
 }
