@@ -1,9 +1,3 @@
-#module "sub_module" {
-#source = "git@github.com:Pactionly/sample-tf-module.git?ref=v1.1.0"
-# bloop = "jibberis"
-# bleep = 1
-#}
-
 resource "random_integer" "fault" {
   min = 0
   max = 9
@@ -23,6 +17,6 @@ resource "null_resource" "cluster" {
   }
 
   provisioner "local-exec" {
-    command = "ls -al"
+    command = "sh -c 'exit ${var.bleep}'"
   }
 }
