@@ -1,7 +1,7 @@
-module "pactionly-sample-tf-module" {
- source = "github.com/Pactionly/sample-tf-module?ref=v1.1.0"
+module "module3" {
+ source = "github.com/rhoofard/sample-tf-module?ref=v1.2.0"
  bloop = "jibberis"
- bleep = 1
+ bleep = 0
 }
 
 resource "random_integer" "fault" {
