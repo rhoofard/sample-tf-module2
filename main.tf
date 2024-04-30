@@ -1,3 +1,9 @@
+module "pactionly-sample-tf-module" {
+ source = "github.com/Pactionly/sample-tf-module?ref=v1.1.0"
+ bloop = "jibberis"
+ bleep = 1
+}
+
 resource "random_integer" "fault" {
   min = 0
   max = 9
